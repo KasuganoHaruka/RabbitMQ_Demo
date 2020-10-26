@@ -1,0 +1,23 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "TestGrpcService";
+
+package Cat;
+
+// The greeting service definition.
+service LuCat {
+  // Sends a greeting
+  rpc SuckingCat (SuckingCatRequest) returns(SuckingCatResult);
+
+   rpc JumpCat (SuckingCatRequest) returns(SuckingCatResult);
+}
+
+// The request message containing the user's name.
+message SuckingCatRequest {
+  string name = 1;
+}
+
+message SuckingCatResult {
+  string name = 1;
+}
+

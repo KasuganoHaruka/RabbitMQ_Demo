@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option csharp_namespace = "TestGrpcService";
+
+
+package rabbit;
+
+service Rabbit {
+  rpc Call (RabbitRequest) returns (RabbitReply);
+
+  rpc Other (RabbitRequest) returns (RabbitReply);
+}
+
+message RabbitRequest {
+  string param = 1;
+}
+
+message RabbitReply {
+  string message = 1;
+}
